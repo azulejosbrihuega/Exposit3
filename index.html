@@ -11,6 +11,16 @@
             obj.style.height = 0;
             obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
         }
+
+        window.onscroll = function () { scrollfunction() };
+
+        function scrollfunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("botonarriba").style.display = "block";
+            } else {
+                document.getElementById("botonarriba").style.display = "none";
+            }
+        }
     </script>
 </head>
 
@@ -29,18 +39,7 @@
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true" width="100%" height="220" onload='resizeIframe(this)'></iframe>
     <hr>
     <footer>
-        <a href="#" id="botonarriba">Volver al principio</a>
-        <script>
-            window.onscroll = function () { scrollfunction() };
-
-            function scrollfunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("botonarriba").style.display = "block";
-                } else {
-                    document.getElementById("botonarriba").style.display = "none";
-                }
-            }
-        </script>
+        <a href="#" id="botonarriba" style="display: none;">Volver al principio</a>
     </footer>
 </body>
 
