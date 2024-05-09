@@ -5,31 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>expositor n1</title>
-
+    <link rel="stylesheet" href="estilos.css">
     <style>
-        /* Estilos para el enlace */
-        .contenedor {
-            text-align: center; /* Esto centra el enlace horizontalmente */
-        }
-
-        .contenedor a {
-            display: inline-block; /* Hace que el enlace se comporte como un bloque, permitiendo ajustar su ancho */
-            padding: 10px 20px; /* Puedes ajustar los píxeles aquí para controlar el espacio alrededor del enlace */
-            background-color: #007bff; /* Color de fondo del enlace */
-            color: #fff; /* Color del texto del enlace */
-            text-decoration: none; /* Quita el subrayado del enlace */
-            border-radius: 5px; /* Añade bordes redondeados al enlace */
-        }
-
         /* Estilos adicionales para mantener el diseño */
         body {
             margin: 0; /* Elimina el margen predeterminado del cuerpo */
             padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+            background-color: rgb(18, 152, 144); /* Color de fondo del cuerpo */
         }
 
         header {
+            background-color: rgb(4, 13, 11); /* Color de fondo del encabezado */
+            color: #ffffff; /* Color del texto del encabezado */
+            padding: 20px;
             text-align: center; /* Centra el contenido del encabezado */
-            padding: 20px 0; /* Añade espacio alrededor del encabezado */
         }
 
         .divbaku {
@@ -43,8 +32,17 @@
         }
 
         footer {
+            background-color: rgb(4, 13, 11); /* Color de fondo del pie de página */
+            color: #ffffff; /* Color del texto del pie de página */
             text-align: center; /* Centra el contenido del pie de página */
             padding: 20px 0; /* Añade espacio alrededor del pie de página */
+        }
+
+        /* Ajuste para la tabla */
+        iframe {
+            width: 100%; /* Ajusta el ancho de la tabla al 100% del contenedor */
+            height: auto; /* Hace que la altura se ajuste automáticamente según el ancho */
+            max-width: 100%; /* Establece un ancho máximo para la tabla */
         }
     </style>
 </head>
@@ -75,7 +73,7 @@
             window.onscroll = function () { scrollfunction() };
 
             function scrollfunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrolltop > 20) {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     document.getElementById("botonarriba").style.display = "block";
                 } else {
                     document.getElementById("botonarriba").style.display = "none"; /* Corregido: quitado el punto antes de botonarriba */
