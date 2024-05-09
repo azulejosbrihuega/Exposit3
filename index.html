@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>expositor n1</title>
     <link rel="stylesheet" href="estilos.css">
+    <style>
+        #tablaContainer {
+            width: 100%;
+            overflow: hidden;
+        }
+        #tablaIframe {
+            width: 100%;
+            border: none;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +33,9 @@
         </div>
     </div>
 
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true" width="100%" style="border:none;"></iframe>
+    <div id="tablaContainer">
+        <iframe id="tablaIframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true"></iframe>
+    </div>
     <hr>
     
     <footer>
@@ -35,6 +48,16 @@
                     document.getElementById("botonarriba").style.display = "block";
                 } else {
                     document.getElementById("botonarriba").style.display = "none";
+                }
+            }
+
+            window.onload = function () {
+                var iframe = document.getElementById('tablaIframe');
+                if (iframe) {
+                    iframe.onload = function () {
+                        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        iframe.style.height = iframeDoc.body.scrollHeight + 'px';
+                    }
                 }
             }
         </script>
