@@ -5,41 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>expositor n1</title>
+
     <link rel="stylesheet" href="estilos.css">
-    <script type="text/javascript">
-        function resizeIframe(obj){
-            obj.style.height = 0;
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    
+    <style>
+        /* Estilo para hacer la tabla transparente */
+        iframe {
+            background-color: transparent;
         }
-
-        window.onscroll = function () { scrollfunction() };
-
-        function scrollfunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("botonarriba").style.display = "block";
-            } else {
-                document.getElementById("botonarriba").style.display = "none";
-            }
-        }
-    </script>
+    </style>
 </head>
 
 <body>
     <header>
+
         <img src="logomoral3.png" width="325px">
+        
+        
     </header>
     <hr>
     <div>
-        <u></u>
+
+        <u>
+
+        </u>
         <div class="divbaku">
-            <img src="KIEL_ATRIUM.png" width="100%" height="100%" class="foto">
-            <img src="KIEL2_ATRIUM.png" width="100%" height="100%" class="foto">
+
+            <img src="FOSTER_Argenta.png" width="100%" height="100%" class="foto">
+            <img src="FOSTER_Argenta_ESP.png" width="100%" height="100%" class="foto">
+       
         </div>
+
+
+
+
+
+
+
     </div>
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true" width="100%" height="220" onload='resizeIframe(this)'></iframe>
+
+
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBM4BpDeoefhX3w72GgIlXF04x95V6yo9rKrrtMkoWuwzEnGpqbUdRqQdmvy058BPFVXyWW53wLzNo/pubhtml?gid=0&single=true
+    " width="100%" height="350"></iframe>
     <hr>
+
+    
     <footer>
-        <a href="#" id="botonarriba" style="display: none;">Volver al principio</a>
+        <a href="#" id="botonarriba">Volver al principio</a>
+
+        <script>
+            window.onscroll = function () { scrollfunction() };
+
+            function scrollfunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrolltop > 20) {
+                    document.getElementById("botonarriba").style.display = "block";
+                } else {
+                    document.getElementById(".botonarriba").style.display = "none";
+                }
+            }
+        </script>
     </footer>
 </body>
 
