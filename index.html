@@ -14,6 +14,7 @@
         #tablaContainer iframe {
             width: 100%;
             border: none;
+            height: auto; /* Esto permite que el iframe ajuste su altura automáticamente */
         }
     </style>
 </head>
@@ -33,7 +34,7 @@
     </div>
 
     <div id="tablaContainer">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true"></iframe>
+        <iframe id="tablaIframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true"></iframe>
     </div>
     <hr>
     
@@ -47,6 +48,16 @@
                     document.getElementById("botonarriba").style.display = "block";
                 } else {
                     document.getElementById("botonarriba").style.display = "none";
+                }
+            }
+
+            window.onload = function () {
+                var iframe = document.getElementById('tablaIframe');
+                if (iframe) {
+                    iframe.onload = function () {
+                        var alturaContenido = iframe.contentWindow.document.body.scrollHeight;
+                        iframe.style.height = alturaContenido + 'px';
+                    }
                 }
             }
         </script>
