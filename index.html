@@ -11,10 +11,9 @@
             width: 100%;
             overflow: hidden;
         }
-        #tablaIframe {
+        #tablaContainer iframe {
             width: 100%;
             border: none;
-            height: auto;
         }
     </style>
 </head>
@@ -34,7 +33,7 @@
     </div>
 
     <div id="tablaContainer">
-        <iframe id="tablaIframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb30xdJdzt60tstcacIWoja4p8RaP2ltF6Z7qdER6pJ5hhNhLFciANEARbMeIBAfNVPNZSjjjql3d4/pubhtml?gid=0&single=true"></iframe>
     </div>
     <hr>
     
@@ -48,16 +47,6 @@
                     document.getElementById("botonarriba").style.display = "block";
                 } else {
                     document.getElementById("botonarriba").style.display = "none";
-                }
-            }
-
-            window.onload = function () {
-                var iframe = document.getElementById('tablaIframe');
-                if (iframe) {
-                    iframe.onload = function () {
-                        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                        iframe.style.height = iframeDoc.body.scrollHeight + 'px';
-                    }
                 }
             }
         </script>
