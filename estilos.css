@@ -56,3 +56,11 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+.siguiente{
+    float: right;
+}
+
+.anterior{
+    float: left;
+}
